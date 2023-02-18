@@ -1,8 +1,34 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
+import {
+  Inter,
+  Cinzel,
+  Cinzel_Decorative,
+  IM_Fell_DW_Pica,
+  IM_Fell_DW_Pica_SC,
+} from "@next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const cinzel = Cinzel({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
+const cinzel_decorative = Cinzel_Decorative({
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-cinzel-decorative",
+});
+const pica = IM_Fell_DW_Pica({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pica",
+});
+const picaSC = IM_Fell_DW_Pica_SC({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-pica-sc",
+});
 
 export default function Home() {
   return (
@@ -13,8 +39,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1>My DnD Journal</h1>
+      <main
+        className={`${inter.variable} ${cinzel.variable} ${cinzel_decorative.variable} ${pica.variable} ${picaSC.variable}`}
+      >
+        <h1 className="font-inter text-xl">Inter</h1>
+        <h1 className="font-cinzel font-black text-xl">Cinzel</h1>
+        <h1 className="font-cinzel_decorative text-xl">Cinzel Decorative</h1>
+        <h1 className="font-pica text-xl">Pica</h1>
+        <h1 className="font-picaSC text-xl">Pica SC</h1>
       </main>
     </>
   );
