@@ -40,7 +40,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${inter.variable} ${cinzel.variable} ${cinzel_decorative.variable} ${pica.variable} ${picaSC.variable}`}
+        className={`${inter.variable} ${cinzel.variable} ${cinzel_decorative.variable} ${pica.variable} ${picaSC.variable} phb`}
       >
         <h1 className="font-inter text-xl">Inter</h1>
         <h1 className="font-cinzel font-black text-xl">Cinzel</h1>
